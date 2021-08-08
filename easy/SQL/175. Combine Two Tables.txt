@@ -1,0 +1,21 @@
+#Aug 7,2021
+
+#Question: 
+
+#Write a SQL query for a report that provides the following information for each person in the Person table, regardless if there is an address for each of those people:
+
+#FirstName, LastName, City, State
+
+#Thoughts:
+
+#LEFT JOIN has to be used, due to the condition of regardless if there is an address for each of those people
+
+# Write your MySQL query statement below
+
+SELECT FirstName, LastName, City, State
+FROM Person
+LEFT JOIN Address ON Person.PersonId = Address.PersonId
+
+#Runtime: 292 ms, faster than 67.64% of MySQL online submissions for Combine Two Tables.
+Memory Usage: 0B, less than 100.00% of MySQL online submissions for Combine Two Tables.
+#08/07/2021 21:39	Accepted	292 ms	0B	mysql
