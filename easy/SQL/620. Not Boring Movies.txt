@@ -1,0 +1,20 @@
+#Aug 8,2021
+
+#Question: 
+
+#Write an SQL query to report the movies with an odd-numbered ID and a description that is not "boring".
+
+#Return the result table in descending order by rating.
+
+#The query result format is in the following example:
+
+# Write your MySQL query statement below
+SELECT * FROM Cinema
+WHERE MOD(id, 2) != 0 
+AND description != 'boring' 
+ORDER BY rating DESC
+
+
+#Runtime: 195 ms, faster than 42.06% of MySQL online submissions for Not Boring Movies.
+#Memory Usage: 0B, less than 100.00% of MySQL online submissions for Not Boring Movies.
+#08/08/2021 00:47	Accepted	195 ms	0B	mysql

@@ -1,0 +1,15 @@
+#Aug 7,2021
+
+#Question: 
+
+#Suppose that a website contains two tables, the Customers table and the Orders table. Write a SQL query to find all customers who never order anything.
+
+# Write your MySQL query statement below
+SELECT Name AS 'Customers'
+FROM Customers
+LEFT JOIN Orders ON Orders.CustomerId = Customers.Id
+WHERE CustomerId IS NULL
+
+#Runtime: 496 ms, faster than 29.88% of MySQL online submissions for Customers Who Never Order.
+Memory Usage: 0B, less than 100.00% of MySQL online submissions for Customers Who Never Order.
+#08/08/2021 00:17	Accepted	496 ms	0B	mysql

@@ -1,0 +1,19 @@
+#Aug 8,2021
+
+#I'm not too familiar with the updating/Create Operations, mainly reads.
+
+#Question: 
+
+#Write an SQL query to swap all 'f' and 'm' values (i.e., change all 'f' values to 'm' and vice versa) with a single update statement and no intermediate temp table(s).
+
+# Write your MySQL query statement below
+UPDATE Salary
+SET sex =
+CASE WHEN sex = 'm' then 'f'
+    WHEN sex = 'f' then 'm'
+END
+
+
+#Runtime: 261 ms, faster than 22.65% of MySQL online submissions for Swap Salary.
+#Memory Usage: 0B, less than 100.00% of MySQL online submissions for Swap Salary.
+#08/08/2021 00:56	Accepted	261 ms	0B	mysql

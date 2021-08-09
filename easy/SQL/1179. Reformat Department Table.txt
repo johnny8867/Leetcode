@@ -1,0 +1,25 @@
+#Aug 7,2021
+
+#Question: 
+
+#Write an SQL query to reformat the table such that there is a department id column and a revenue column for each month.
+
+## Write your MySQL query statement below
+SELECT id, 
+(SELECT SUM(revenue) FROM Department A WHERE month = 'Jan' AND A.ID=Department.ID) AS 'Jan_Revenue',
+(SELECT SUM(revenue) FROM Department B WHERE month = 'Feb' AND B.ID=Department.ID) AS 'Feb_Revenue',
+(SELECT SUM(revenue) FROM Department C WHERE month = 'Mar' AND C.ID=Department.ID) AS 'Mar_Revenue',
+(SELECT SUM(revenue) FROM Department D WHERE month = 'Apr' AND D.ID=Department.ID) AS 'Apr_Revenue',
+(SELECT SUM(revenue) FROM Department E WHERE month = 'May' AND E.ID=Department.ID) AS 'May_Revenue',
+(SELECT SUM(revenue) FROM Department F WHERE month = 'Jun' AND F.ID=Department.ID) AS 'Jun_Revenue',
+(SELECT SUM(revenue) FROM Department G WHERE month = 'Jul' AND G.ID=Department.ID) AS 'Jul_Revenue',
+(SELECT SUM(revenue) FROM Department H WHERE month = 'Aug' AND H.ID=Department.ID) AS 'Aug_Revenue',
+(SELECT SUM(revenue) FROM Department I WHERE month = 'Sep' AND I.ID=Department.ID) AS 'Sep_Revenue', 
+(SELECT SUM(revenue) FROM Department J WHERE month = 'Oct' AND J.ID=Department.ID) AS 'Oct_Revenue',
+(SELECT SUM(revenue) FROM Department K WHERE month = 'Nov' AND K.ID=Department.ID) AS 'Nov_Revenue',
+(SELECT SUM(revenue) FROM Department L WHERE month = 'Dec' AND L.ID=Department.ID) AS 'Dec_Revenue'
+FROM (SELECT DISTINCT ID FROM DEPARTMENT) AS Department
+
+#Runtime: 1823 ms, faster than 5.02% of MySQL online submissions for Reformat Department Table.
+#Memory Usage: 0B, less than 100.00% of MySQL online submissions for Reformat Department Table.
+#08/07/2021 22:22	Accepted	1823 ms	0B	mysql

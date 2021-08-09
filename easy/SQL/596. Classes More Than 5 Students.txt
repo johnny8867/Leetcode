@@ -1,0 +1,20 @@
+#Aug 8,2021
+
+#Question: 
+
+#There is a table courses with columns: student and class
+
+#Please list out all classes which have more than or equal to 5 students.
+
+#For example, the table:
+
+# Write your MySQL query statement below
+SELECT DISTINCT(class) 
+FROM courses
+GROUP BY class
+HAVING count(DISTINCT(student)) >= 5
+
+
+#Runtime: 286 ms, faster than 36.99% of MySQL online submissions for Classes More Than 5 Students.
+#Memory Usage: 0B, less than 100.00% of MySQL online submissions for Classes More Than 5 Students.
+#08/08/2021 00:41	Accepted	286 ms	0B	mysql
