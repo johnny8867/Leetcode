@@ -5,7 +5,8 @@
 
 #Thoughts:
 
-p = [[1,2,3],[4,5,6]]
+p = [1,2,3]
+q = [4,5,6]
 
-d=zip(p)
-print(list(d))
+d = p+q
+print(d)
