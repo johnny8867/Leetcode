@@ -5,8 +5,15 @@
 
 #Thoughts:
 
-p = [1,2,3]
+#p = set([1,2,3,3])*2
 q = [4,5,6]
+#q ="456"
+#d = p+q
+#print(p)
 
-d = p+q
-print(d)
+#for item in q:
+#    print(item)
+
+q.reverse()
+
+print(q)
